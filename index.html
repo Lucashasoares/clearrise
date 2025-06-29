@@ -448,7 +448,25 @@
         <p style="margin: 0;text-align: center;" class="display-7">&#8204;</p>
         <a style="z-index:1" href="https://mobirise.com/builder/ai-website-creator.html">AI Website Creator</a>
     </section>-->
-    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/vimeoplayer/player.js"></script>  <script src="assets/mbr-tabs/mbr-tabs.js"></script>  <script src="assets/theme/js/script.js"></script>  
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/vimeoplayer/player.js"></script>  <script src="assets/mbr-tabs/mbr-tabs.js"></script>  <script src="assets/theme/js/script.js"></script> 
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+            var navbarCollapse = document.querySelector(".navbar-collapse");
+
+            navLinks.forEach(function(link) {
+            link.addEventListener("click", function () {
+                if (window.innerWidth < 992) { // só colapsa no modo mobile
+                var bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                    toggle: false
+                });
+                bsCollapse.hide();
+                }
+            });
+            });
+        });
+    </script>
   
   
 </body>
