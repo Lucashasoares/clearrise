@@ -73,10 +73,25 @@ body {
     padding: 4rem;
   }
 }
+.cid-uPyaDqXtqg {
+    padding-top: 9rem;
+    padding-bottom: 0rem;
+    background-color: #005a99;
+}
+.cid-uPyaDqXtqg .content-head {
+    max-width: 800px;
+}
+.cid-uPyaDqXtqg .mbr-section-title {
+    color: #ffffff;
+}
 .cid-uNXug6FSLj .mbr-text,
 .cid-uNXug6FSLj .mbr-section-btn {
   color: #ffffff;
   text-align: left;
+}
+.cid-uPyaDqXtqg .mbr-text, .cid-uPyaDqXtqg .mbr-section-btn {
+    text-align: center;
+    color: #48a2e1;
 }
 .cid-uNXug6FSLj .card-title,
 .cid-uNXug6FSLj .card-box {
