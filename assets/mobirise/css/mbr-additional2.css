@@ -13,8 +13,37 @@ img,
 .item-wrapper {
   border-radius: 2rem !important;
 }
-.video-wrapper {
-  overflow: hidden;
+/* 1) a seção precisa ser um contêiner de posicionamento e ter altura */
+#header18-1{
+  position: relative;
+  min-height: 70vh;         /* mude para 100vh se quiser tela cheia */
+  overflow: hidden;         /* corta sobras do vídeo */
+}
+/* 2) o vídeo VAI para o fundo ocupando tudo */
+#header18-1 .bg-video{
+  position: absolute !important;
+  inset: 0 !important;      /* top/right/bottom/left = 0 */
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;        /* cobre mantendo proporção */
+  object-position: center;  /* ajuste o “foco” se quiser */
+  z-index: 0 !important;
+  pointer-events: none;     /* evita cliques no vídeo */
+  display: block;           /* neutraliza regras de img/video responsivo */
+}
+/* 3) overlay e conteúdo ficam por cima do vídeo */
+#header18-1 .mbr-overlay{ position:absolute; inset:0; z-index:1; }
+#header18-1 .container-fluid,
+#header18-1 .row,
+#header18-1 .content-wrap{ position:relative; z-index:2; }
+
+/* altura confortável do herói; ajuste se quiser full-screen real */
+#header18-1.mbr-fullscreen .content-wrap {
+  min-height: 70vh;                  /* pode trocar para 100vh se quiser */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(64px, 10vh, 160px) 0;
 }
 body {
   font-family: Inter Tight;
@@ -60,6 +89,10 @@ body {
 }
 @media (max-width: 767px) {
   .cid-uNXug6FSLj .card-wrapper {
+    #header18-1.mbr-fullscreen .content-wrap {
+    min-height: 60vh;
+    padding: 56px 0;
+  }
     padding: 2rem 1.5rem;
   }
 }
