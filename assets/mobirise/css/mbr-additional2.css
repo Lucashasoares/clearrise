@@ -5165,3 +5165,44 @@ a {
 .cid-uNsoeSaPgh .copyright {
   color: #000000;
 }
+
+/* HERO com vídeo de fundo */
+#header18-1{
+  position: relative;
+  min-height: 70vh;         /* 100vh se quiser tela cheia */
+  overflow: hidden;
+}
+
+#header18-1 .bg-video{
+  position: absolute !important;
+  inset: 0 !important;      /* top/right/bottom/left = 0 */
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0 !important;
+  pointer-events: none;
+  display: block;
+  object-position: 50% 40%;
+}
+
+#header18-1 .mbr-overlay{ position:absolute; inset:0; z-index:1; }
+#header18-1 .container-fluid,
+#header18-1 .row,
+#header18-1 .content-wrap{ position:relative; z-index:2; }
+
+/* altura confortável em “fullscreen” */
+#header18-1.mbr-fullscreen .content-wrap {
+  min-height: 70vh;               /* troque para 100vh se quiser */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(64px, 10vh, 160px) 0;
+}
+
+/* opcional (mobile) */
+@media (max-width: 767.98px){
+  #header18-1{ min-height: 60vh; }
+}
+
+
