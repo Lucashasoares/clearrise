@@ -1389,10 +1389,10 @@ a {
   text-align: left;
   color: #005a99;
   text-shadow:
-    -1px -1px 2px white,
-     1px -1px 2px white,
-    -1px  1px 2px white,
-     1px  1px 2px white;
+    -3px -3px 4px white,
+     3px -3px 4px white,
+    -3px  3px 4px white,
+     3px  3px 4px white;
 }
 .cid-uNsfAvIeTW .mbr-text,
 .cid-uNsfAvIeTW .mbr-section-btn {
@@ -1568,13 +1568,23 @@ a {
   position: absolute;
   top: 0;
 }
+/* Centralizar o container */
+.cid-uNsku7Pe96 .image-wrap {
+  text-align: center !important;
+}
+
+/* Estilo da imagem */
 .cid-uNsku7Pe96 .image-wrap img {
-  width: 100%;
+  display: inline-block; /* permite centralizar */
+  float: none !important; /* remove qualquer float */
+  width: auto; /* ou defina um tamanho menor se quiser */
+  max-width: 100%; /* mantém responsivo */
 }
 @media (min-width: 992px) {
   .cid-uNsku7Pe96 .image-wrap img {
-    display: block;
-    margin: auto;
+    display: inline-block;
+    margin-left: auto;
+  margin-right: auto;
   }
 }
 .cid-uNsku7Pe96 .row-links {
@@ -2431,11 +2441,14 @@ a {
 }
 .cid-uPyaDqXtqg .image-wrap img {
   width: 100%;
+  text-align: center !important;
+  float: none !important;
 }
 @media (min-width: 992px) {
   .cid-uPyaDqXtqg .image-wrap img {
-    display: block;
-    margin: auto;
+    display: inline-block;
+    margin-left: auto;
+  margin-right: auto;
     width: 60%;
   }
 }
@@ -5512,11 +5525,14 @@ a {
 }
 .cid-uNGizo6k6e .image-wrap img {
   width: 100%;
+  text-align: center !important;
+  float: none !important;
 }
 @media (min-width: 992px) {
   .cid-uNGizo6k6e .image-wrap img {
-    display: block;
-    margin: auto;
+    display: inline-block;
+    margin-left: auto;
+  margin-right: auto;
   }
 }
 .cid-uNGizo6k6e .row-links {
@@ -12230,9 +12246,9 @@ a {
 
 /* Seção de Galeria/Slider */
 .cid-v37W1rzoEv {
-  padding-top: 3rem;
+  padding-top: 7rem;
   padding-bottom: 2rem;
-  background-color: #005a99;
+  background-color: #48a2e1;
 }
 .cid-v37W1rzoEv .item {
   margin-bottom: 2rem;
@@ -12581,4 +12597,24 @@ a {
 /* opcional (mobile) */
 @media (max-width: 767.98px){
   #header18-1{ min-height: 60vh; }
+}
+
+.cid-v37W1rzoEv .item-wrapper {
+    /* Define uma proporção. 
+       1/1 = Quadrado
+       4/3 = Retângulo padrão de foto
+       16/9 = Widescreen 
+    */
+    aspect-ratio: 1 / 1; 
+    width: 100%;
+    height: auto !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.cid-v37W1rzoEv .item-wrapper img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover; /* Isso corta o excesso da imagem para ela não esticar */
+    object-position: center; /* Centraliza a imagem */
 }
