@@ -19,6 +19,11 @@ img,
 body {
   font-family: Inter Tight;
 }
+.display-h1{
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 5.5rem;
+  line-height: 1;
+}
 .display-1 {
   font-family: 'Inter Tight', sans-serif;
   font-size: 5rem;
@@ -1369,7 +1374,7 @@ a {
   }
   .cid-uNsfAvIeTW .content-wrap {
     width: 100%;
-  }
+  } 
 }
 .cid-uNsfAvIeTW .mbr-fallback-image.disabled {
   display: none;
@@ -1552,8 +1557,8 @@ a {
   height: 100%;
 }
 .cid-uNsku7Pe96 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 6rem;
+  padding-bottom: 1rem;
   background-color: #005a99;
 }
 .cid-uNsku7Pe96 .mbr-fallback-image.disabled {
